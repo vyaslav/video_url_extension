@@ -7,6 +7,7 @@
   <body>
     <video id="video" controls="" autoplay="" name="media">
     </video>
+    <a href='javascript:;' onclick='updateURL();'>Update URL</a>
     <script>
       var query = decodeURIComponent(window.location.search.substring(1));
       var video = document.getElementById('video');
@@ -15,6 +16,10 @@
       source.setAttribute('src', query);
       
       video.appendChild(source);
+      
+      function updateURL() {
+        window.location = "http://vyaslav.github.io/video_url_extension/?" + encodeURIComponent(source.src +video.currentTime ),
+      }
     </script>
   </body>
   </html>
