@@ -2,11 +2,19 @@
   <head>
     <meta name="viewport" content="width=device-width">
     <style type="text/css"></style>
+    <script>
+      var query = window.location.search.substring(1);
+      var video = document.getElementById('video');
+      var source = document.createElement('source');
+      
+      source.setAttribute('src', query);
+      
+      video.appendChild(source);
+    </script>
   </head>
   
   <body>
     <video controls="" autoplay="" name="media">
-      <source src="" type="video/mp4">
     </video>
   </body>
   </html>
